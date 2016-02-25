@@ -1,0 +1,74 @@
+/*
+ * brief: 常用组件库
+ * author: MichealYang
+ * date: 2015/5/28
+ */
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    min-width: 800px;
+}
+
+.ft-heiti{
+    font-family:黑体;
+}
+
+.ft-color-red{
+    color:#f00;
+}
+
+.ft-color-green{
+    color:#0f0;
+}
+
+.ft-color-blue{
+    color:#00f;
+}
+
+.ft-color-green2{
+    color:#04D216;
+}
+
+.ft-color-93{
+    color:#939393;
+}
+
+.ft-size-12{
+	font-size: 12px;
+}
+
+.ft-size-18{
+	font-size: 18px;
+}
+
+.ft-size-20{
+	font-size: 20px;
+}
+
+.ft-size-25{
+	font-size: 25px;
+}
+
+.ft-size-30{
+	font-size: 30px;
+}
+
+
+/*base-title-bar: title bar的样式*/
+.base-title-bar{
+    float:left;
+    width:100%;
+    height:40px;
+    background: #f00;
+    margin-top:30px;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #DDD), color-stop(1,#FFF)); 
+}
+
+.base-title-span{
+    float:left;
+    width:10px;
+    height:40px;
+    background: #0f0;
+}

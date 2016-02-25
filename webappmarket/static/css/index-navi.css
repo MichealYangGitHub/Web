@@ -1,0 +1,30 @@
+
+.navi-style{
+    position:fixed;
+    top:0px;
+    width: 100%;
+	min-width:850px;
+	height: 50px;
+}
+
+.navi-gray{
+    background:#333 !important;
+}
+.navi-blue{
+    background:#030391 !important
+}
+.navi-green{
+    background:#030391 !important
+}
+
+/*navi-*: navi bar的颜色*/
+.navi-gray{
+    background:#333 !important
+}
+.navi-blue{
+    background:#030391 !important
+}
+.navi-green{
+    background:#030391 !important
+}
+

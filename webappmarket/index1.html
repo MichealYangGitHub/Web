@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+    brief: 列表风格模板
+    目录结构：
+        +index-list.html
+        |**js/base-list.js
+        |**css/base-list.html
+    author: MichealYang
+    date: 2015/5/28
+-->
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf8">
+        <link type="text/css" rel="stylesheet" href="./static/css/index-navi.css" />
+		<link type="text/css" rel="stylesheet" href="./static/css/index-main.css" />
+        <link type="text/css" rel="stylesheet" href="./static/css/base-my.css" />
+        <link type="text/css" rel="stylesheet" href="./static/css/bootstrap-my.css" />
+        <link type="text/css" rel="stylesheet" href="./static/css/bootstrap-theme-my.css" />
+        <script type="text/javascript" src="./static/js/jquery-1.11.3.js"></script>
+		<script type="text/javascript" src="./static/js/index-main.js"></script>
+        <title>WebApp</title>
+    </head>
+    <body onresize="onResizeFunc();">
+        <div id="index-main">
+            <div id="index-head" class="navi-style">
+                <nav class="navbar navbar-inverse navi-gray">
+                    <a class="navbar-brand" href="#">首页</a>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">我的Web</a></li>
+                        <li><a href="#">我的App</a></li>
+                        <li><a href="#">Web App Store</a></li>
+                    </ul>
+                </nav>
+            </div><!--index-head end-->
+            <div id="index-content">
+                <iframe id="iframe-content" class="iframe-style" src="myweb.html" width="100%" scrolling="yes" frameborder=0 onload="onResizeFunc();">
+                </iframe>
+            </div><!--content end-->
+        </div><!--index-main end-->
+    </body>
+</html>

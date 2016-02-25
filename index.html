@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+    <HEAD>
+        <title>Index</title>
+        <link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.css">
+        <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+        <link rel="stylesheet" href="./css/font-awesome.min.css">
+        <script type="text/javascript" src="./js/jquery-2.1.4.js"/></script>
+        <script type="text/javascript" src="./js/bootstrap.js"/></script>
+    </HEAD>
+    <BODY>
+    <h1>目录：</h1>
+    <ul>
+        <li><a href="#catalog1">图片预览</a></li>
+        <li><a href="#catalog2">文件上传</a></li>
+    </ul>
+        <hr>
+        <h2><span id="catalog1">图片预览</span></h2>
+        <br>
+        <div class="input-group">
+            <div class="input-group-addon">网站图片</div>
+            <input id="selectFile" type="file" class="hidden">
+            <input type="text" name="webLogo" class="form-control" style="width: 100%;" placeholder="网址Logo">
+            <div id="addPic" class="input-group-addon" style="cursor:pointer;"><li class="fa fa-folder-open">Open</li></div>
+        </div>
+        <div style="width: 100%;">
+            <div style="width: 200px; margin-right: auto; margin-left: auto;">
+                <img id="imgPreview" class="img-thumbnail" src="" style="width: 200px; height: 200px;">
+            </div>
+        </div>
+        HTML:        
+        <textarea class="form-control" rows='12' readonly>
+            <div class="input-group">
+                <div class="input-group-addon">网站图片</div>
+                <input id="selectFile" type="file" class="hidden">
+                <input type="text" name="webLogo" class="form-control" style="width: 100%;" placeholder="网址Logo">
+                <div id="addPic" class="input-group-addon" style="cursor:pointer;"><li class="fa fa-folder-open">Open</li></div>
+            </div>
+            <div style="width: 100%;">
+                <div style="width: 200px; margin-right: auto; margin-left: auto;">
+                    <img id="imgPreview" class="img-thumbnail" src="" style="width: 200px; height: 200px;">
+                </div>
+            </div>
+        </textarea>
+        JS:
+        <textarea class="form-control" rows='25' readonly>
+        //添加图片
+        $("#addPic").click(function(){
+            $("#selectFile").click();
+        });
+        $("#selectFile").change(function(e){
+            var file = e.target.files[0];
+            var fileName = file.name;
+            $("input[name=webLogo]").val(fileName);
+            var extStart = fileName.lastIndexOf(".");
+            var ext = fileName.substring(extStart, fileName.length).toUpperCase();
+            if (ext != ".BMP" && ext != ".PNG" && ext != ".GIF" && ext != ".JPG" && ext != ".JPEG") {
+                alert("图片限于bmp,png,gif,jpeg,jpg格式");
+                e.target.files[0] = '';
+                return false;
+            }
+            var fr = new FileReader();
+            fr.onloadend = function (e) {
+                document.getElementById("imgPreview").src = e.target.result;
+                console.log(e.target.result);
+            };
+            fr.readAsDataURL(file);
+        });
+        </textarea>
+
+        
+        <hr>
+        <h2><span id="catalog2">文件上传</span></h2>
+
+        <hr>
+        <hr>
+        <hr>
+    </BODY>
+</HTML>
+<script type="text/javascript">
+    //For catalog1
+    //添加图片
+    $("#addPic").click(function(){
+        $("#selectFile").click();
+    });
+    $("#selectFile").change(function(e){
+        var file = e.target.files[0];
+        var fileName = file.name;
+        $("input[name=webLogo]").val(fileName);
+        var extStart = fileName.lastIndexOf(".");
+        var ext = fileName.substring(extStart, fileName.length).toUpperCase();
+        if (ext != ".BMP" && ext != ".PNG" && ext != ".GIF" && ext != ".JPG" && ext != ".JPEG") {
+            alert("图片限于bmp,png,gif,jpeg,jpg格式");
+            e.target.files[0] = '';
+            return false;
+        }
+        var fr = new FileReader();
+        fr.onloadend = function (e) {
+            document.getElementById("imgPreview").src = e.target.result;
+            console.log(e.target.result);
+        };
+        fr.readAsDataURL(file);
+    });
+
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+    <HEAD>
+        <title>Index</title>
+        <link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.css">
+        <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+        <script type="text/javascript" src="./js/jquery-2.1.4.js"/></script>
+        <script type="text/javascript" src="./js/bootstrap.js"/></script>
+    </HEAD>
+    <BODY>
+        <button class="btn btn-info" id="get">GET</button>
+        <button class="btn btn-info" id="confirm">Click</button>
+    </BODY>
+</HTML>
+
+<script>
+    var details = [];
+    details.push({"csu_id":1000009, "quantity":2});
+    details.push({"csu_id":1000001, "quantity":1});
+    $("#get").click(function(){
+        $.ajax({
+            url: "http://l27.0.0.1:9000/klweb/csu/r/getCsusByIds?ids=1000008,1000009,1000010",
+            async: false,
+            type: "GET",
+            dataType: "jsonp",
+            crossDomain:true
+        });
+    });
+    $("#confirm").click(function(){
+        $.ajax({
+            url: "http://localhost:9000/klweb/csuOrder/w/addOrder",
+            async: false,
+            type: "POST",
+            dataType: "json",
+            data: JSON.stringify({"details": details,
+                "wmPoiId": 37946,
+                "county_id": 130102,
+                "recipient_address":"找不到胡同",
+                "recipient_name":"MY",
+                "recipient_phone":12345678901,
+                "remark":"This is a remark"
+            })
+        });
+    });
+</script>

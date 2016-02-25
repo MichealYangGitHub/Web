@@ -1,0 +1,16 @@
+html, body{
+	text-align: center;
+}
+#index-main{
+	width: 100%;
+}
+
+#index-head{
+}
+
+#index-content{
+	width: 100%;
+	padding-top: 50px;
+	border: 1px solid #0ff;
+}
+

@@ -1,0 +1,383 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+html p{
+	margin: 0;
+	padding: 0;
+}
+
+#main{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	min-width: 800px;
+	overflow-x: auto;
+}
+
+.search-bar-style{
+	float: left;
+	width: 100%;
+	height: 30px;
+	background-color: #ff0;
+}
+
+.showApp-style{
+	float: left;
+	width: 100%;
+	height:100%;
+}
+
+
+#category{
+	float: left;
+	width: 10%;
+	height: 100%;
+	min-width: 100px;
+}
+
+.panel-heading{
+	padding:0;
+	padding-left:15px;
+	width: 100%;
+}
+
+.panel-heading a h4{
+	width:100%;
+	padding-top: 10px;
+	height: 36px;
+}
+
+#content{
+	float: left;
+	width: 90%;
+	min-width: 400px;
+	height: 100%;
+	padding: 20px 40px;
+	overflow-y: auto;
+	/*background-color: #ff8877;*/
+}
+
+.appstore-app-list{
+	float: left;
+	width: 150px;
+	height: auto;
+	margin: 40px 20px;
+	padding: 2px 2px 2px 2px;
+	border: 1px dashed #F5AE0E;
+	border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.appstore-app-list img{
+	float: left;
+	width: 100%;
+	height: 110px;
+	cursor: pointer;
+	border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.appstore-app-desc{
+	float: left;
+	width: 100%;
+	height: 100px;
+}
+
+.appstore-app-title{
+	float: left;
+	width: 100%;
+	height: 30px;
+	padding: 5px 0 0 2px;
+}
+
+.line-linear-griadent{
+	float: left;
+	width: 100%;
+	height: 1px;
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #0f0), color-stop(1,#FFF));
+}
+
+.appstore-app-abstract{
+	float: left;
+	width: 100%;
+	height: 40px;
+	padding: 5px 0 0 2px;
+	border-bottom: 1px dashed #ccc;
+}
+
+.abstract-btn-size{
+	width: 40px;
+	height: 22px;
+	font-size: 12px;
+	margin: 0;
+	margin-left: 2px;
+	padding: 0;
+}
+
+
+#appstore-abstract-btn{
+	float: left;
+	margin: 4px;
+	width: auto;
+	height: auto;
+}
+
+
+.btn-gray{
+	background-color: #999;
+	border: 1px solid #999;
+	color: #fff;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+.btn-my{
+	background-color: #FB3E3E;
+	border: 1px solid #fff;
+}
+
+
+#appstore-list-add{
+	margin: 50px 0;
+	border: 1px dashed #999;
+	
+}
+
+.appstore-app-list-hover{
+	 box-shadow:0 0 8px rgba(245,174,14,1);
+	 -moz-box-shadow:0 0 8px rgba(245,174,14,1);
+	 -webkit-box-shadow:0 0 8px rgba(245,174,14,1);
+}
+
+.modal-img{
+	width: 400px;
+	height: auto;
+	display: inline-block;
+	border-bottom: 1px solid #ddd;
+}
+
+.modal-body .modal-thumbnail img{
+	float: left;
+	width: 400px;
+	height: 230px;
+	vertical-align: bottom;
+}
+
+.modal-tab{
+	width: 100%;
+	height: 20px;
+	margin-top: 5px;
+	padding-left: auto;
+	text-align: center;
+	padding-right: auto;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.modal-tab-btn{
+	display: inline-block;
+	width: 80px;
+	height: 20px;
+	background-color: #ddd;
+}
+
+#modal-tab-btn-left{
+	border-radius: 5px 0px 0px 2px;
+	-moz-border-radius: 2px;
+}
+
+#modal-tab-btn-right{
+	border-radius: 0px 5px 2px 0px;
+	-moz-border-radius: 2px;
+}
+
+.modal-tab-btn-click{
+	background-color: #F9AC21;
+	color: #fff;
+}
+
+#modal-abstract{
+}
+
+#modal-btn-comment{
+	float:right;
+	padding: 0;
+	margin: 10px 10px 0px 0px;
+	height: 30px;
+	font-size: 12px;
+	width: 60px;
+}
+
+.modal-comment-span{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.modal-comment-author{
+	display: block;
+	width: 100%;
+	height: auto;
+	font-size: 12px;
+	font-style: italic;
+	color: #888;
+	text-align: right;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 10px;
+}
+
+.modal-info{
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	max-height: 300px;
+	overflow: auto;
+}
+
+.modal-stars{
+	width: 150px;
+	height: 230px;
+	margin-left: 10px;
+	display: inline-block;
+	padding-left: 5px;
+}
+
+#modal-star{
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.modal-star-tb tr{
+	line-height: 12px;
+	font-size: 12px;
+	height: 12px;
+}
+
+td .modal-star-tb .modal-star{
+	line-height: 12px;
+	width: 80px;
+	height: 12px;
+}
+
+.modal-star-tb .modal-percentage{
+	width: 60px;
+}
+
+.modal-star-tb .modal-score{
+	width: 30px;
+}
+
+.modal-star-tb .modal-blank{
+	width: 5px;
+}
+
+.modal-5star{
+	background-image: url(../img/stars1.jpg);
+	background-position: 0px 0px;
+}
+
+.modal-4star{
+	background-image: url(../img/stars1.jpg);
+	background-position: 0px -12px;
+}
+
+.modal-3star{
+	background-image: url(../img/stars1.jpg);
+	background-position: 0px -24px;
+}
+
+.modal-2star{
+	background-image: url(../img/stars1.jpg);
+	background-position: 0px -36px;
+}
+
+.modal-1star{
+	background-image: url(../img/stars1.jpg);
+	background-position: 0px -48px;
+}
+.progress{
+	height: 12px;
+}
+
+.div-percentage{
+	background-color: #FDB164; 
+	height: 10px;
+}
+
+.modal-final-score{
+	float: left;
+	height: 18px;
+	width: 84px;
+	margin-top: 5px;
+	background-image: url(../img/stars2.png);
+	background-position: 0px -142px;
+}
+
+#modal-final-score-h{
+	float: left;
+	margin-left: 10px;
+	font-size: 25px;
+	color: #f00;
+}
+
+#modal-final-score-l{
+	float: left;
+	font-size: 20px;
+	color: #f00;
+}
+
+.modal-people{
+	width: 100%;
+	float: left;
+}
+
+.modal-tb-statistic{
+	font-size: 12px;
+	color: #5F9CDE;
+}
+
+#modal-evaluate{
+	float: left;
+	width: 100%;
+	height: 20px;
+	margin-top: 20px;
+}
+
+#modal-commit{
+	float: right;
+	padding: 0;
+	margin: 10px 10px 0px 0px;
+	height: 25px;
+	font-size: 12px;
+	width: 40px;
+}
+
+.add-tb-desc{
+	width: 20%;
+	text-align: center;
+}
+
+.add-tb-del{
+	font-style: italic;
+	cursor: pointer;
+	font-size: 12px;
+}
+
+.add-tb-content{
+	width: 80%;
+	height: auto;
+}
+
+.add-tb-content img{
+	width: 400px;
+	height: 230px;
+	display:table-cell;
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer;
+}
