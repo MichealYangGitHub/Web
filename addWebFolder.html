@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://v3.bootcss.com/assets/css/docs.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- Font awesome -->
+    <link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Animate CSS -->
+    <link href="http://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+
+    <title>网络书签</title>
+    <style type="text/css">
+        .mg-top-10{
+            margin-top: 10px;
+        }
+        .mg-top-20{
+            margin-top: 20px;
+        }
+        .mg-top-30{
+            margin-top: 30px;
+        }
+        .mg-top-50{
+            margin-top: 50px;
+        }
+        .mg-bot-10{
+            margin-bottom: 10px;
+        }
+        .mg-bot-20{
+            margin-bottom: 20px;
+        }
+        .mg-bot-30{
+            margin-bottom: 30px;
+        }
+        .mg-bot-50{
+            margin-bottom: 50px;
+        }
+        .ft-size-16{
+            font-size: 16px;
+        }
+        .ft-size-32{
+            font-size: 32px;
+        }
+        .ft-size-64{
+            font-size: 64px;
+        }
+        .ft-size-96{
+            font-size: 96px;
+        }
+        .text-gray{
+            color: gray;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="addWebModal" class="container">
+        <div class="modal" style="display: block">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">添加文件夹或者网页</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                添加文件夹
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                添加网页
+                            </label>
+                        </div>
+                        <div name="webField" class="hidden">
+                            <label></label>
+                            <div class="input-group">
+                                <span class="input-group-addon">网页名称<i class="text-danger">&nbsp;&nbsp;*</i></span>
+                                <input type="text" class="form-control">
+                            </div>
+                            <label></label>
+                            <div class="input-group">
+                                <span class="input-group-addon">网页地址<i class="text-danger">&nbsp;&nbsp;*</i></span>
+                                <input type="text" class="form-control">
+                            </div>
+                            <label></label>
+                            <div class="input-group">
+                                <span class="input-group-addon">网页备注<i class="text-gray">(可选)</i></span>
+                                <input type="text" class="form-control">
+                            </div>
+                            <label></label>
+                            <div class="input-group">
+                                <span class="input-group-addon">网页图片<i class="text-gray">(可选)</i></span>
+                                <input type="text" class="form-control">
+                                <span class="input-group-addon"><i class="fa fa-folder-open"></i>&nbsp;&nbsp;Open</span>
+                            </div>
+                        </div>
+                        <div name="folderField">
+                            <label></label>
+                            <div class="input-group">
+                                <span class="input-group-addon">文件夹名称</span>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success">确认</button>
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">取消</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    </div>
+</body>
+<script type="application/javascript">
+    $("body").on("click", "#addWebModal input[name=optionsRadios]", function(){
+        var test = $(this).attr("id");
+        if(test == "optionsRadios1"){
+            $("#addWebModal div[name=webField]").addClass("hidden");
+            $("#addWebModal div[name=folderField]").removeClass("hidden");
+        }else if(test == "optionsRadios2"){
+            $("#addWebModal div[name=webField]").removeClass("hidden");
+            $("#addWebModal div[name=folderField]").addClass("hidden");
+        }
+        console.log(test);
+    })
+</script>
+</html>

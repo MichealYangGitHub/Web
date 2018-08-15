@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://v3.bootcss.com/assets/css/docs.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- Font awesome -->
+    <link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Animate CSS -->
+    <link href="http://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+
+    <title>网络书签</title>
+    <style type="text/css">
+        .mg-top-10{
+            margin-top: 10px;
+        }
+        .mg-top-20{
+            margin-top: 20px;
+        }
+        .mg-top-30{
+            margin-top: 30px;
+        }
+        .mg-top-50{
+            margin-top: 50px;
+        }
+        .mg-bot-10{
+            margin-bottom: 10px;
+        }
+        .mg-bot-20{
+            margin-bottom: 20px;
+        }
+        .mg-bot-30{
+            margin-bottom: 30px;
+        }
+        .mg-bot-50{
+            margin-bottom: 50px;
+        }
+        .ft-size-16{
+            font-size: 16px;
+        }
+        .ft-size-32{
+            font-size: 32px;
+        }
+        .ft-size-64{
+            font-size: 64px;
+        }
+        .ft-size-96{
+            font-size: 96px;
+        }
+        .text-orange{
+            color: #fb9b40;
+        }
+
+    </style>
+</head>
+<body>
+<div id="webContainer" class="container">
+
+    <div class="mg-top-50">
+        <ul class="nav nav-tabs nav-justified">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">Profile</a></li>
+        </ul>
+    </div>
+
+    <div class="row col-md-12 mg-top-30">
+        <div class="col-md-3 col-xs-12">
+            <ol class="breadcrumb ft-size-16" style="background-color: #fff; border-bottom: 1px solid #ddd">
+                <li><a href="#">学习</a></li>
+                <li><a href="#">博客</a></li>
+                <li class="active">Java</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row" id="webFolders">
+        <div class="folder-card col-md-3 col-sm-3 show-grid text-center mg-top-10 mg-bot-50" data-id="99">
+            <a href="javascript:void(0)" class="btn btn-info btn-lg col-md-12 btn-block" role="button" style="height:180px">
+                <i class="fa fa-folder ft-size-96 mg-top-10"></i>
+                <div class="mg-top-10"><strong>工作</strong></div>
+            </a>
+            <div class="btn-group dropup pull-right">
+                <button class="btn btn-info btn-xs no-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top: -22px;">&nbsp;&nbsp;&nbsp;&hellip;&nbsp;&nbsp;&nbsp;</button>
+                <ul class="dropdown-menu">
+                    <li data-id="99" data-name="工作" name="folderEdit"><a href="javascript:void(0)">编辑</a></li>
+                    <li data-id="99" name="folderDel"><a href="javascript:void(0)">删除</a></li>
+                    <li data-id="99" name="folderMove"><a href="javascript:void(0)">移动</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 show-grid text-center mg-top-10 mg-bot-50">
+            <a href="javascript:void(0)" class="btn btn-info btn-lg col-md-12 btn-block" role="button" style="height:180px">
+                <i class="fa fa-folder ft-size-96 mg-top-10"></i>
+                <div class="mg-top-10"><strong>工作</strong></div>
+            </a>
+        </div>
+        <div class="col-md-3 col-sm-3 show-grid text-center mg-top-10 mg-bot-50">
+            <a href="javascript:void(0)" class="btn btn-info btn-lg col-md-12 btn-block" role="button" style="height:180px">
+                <i class="fa fa-folder ft-size-96 mg-top-10"></i>
+                <div class="mg-top-10"><strong>工作</strong></div>
+            </a>
+        </div>
+        <div class="col-md-3 col-sm-3 show-grid text-center mg-top-10 mg-bot-50">
+            <a href="javascript:void(0)" class="btn btn-info btn-lg col-md-12 btn-block" role="button" style="height:180px">
+                <i class="fa fa-folder ft-size-96 mg-top-10"></i>
+                <div class="mg-top-10"><strong>工作</strong></div>
+            </a>
+        </div>
+        <div class="col-md-3 col-sm-3 show-grid text-center mg-top-10 mg-bot-50">
+            <a href="javascript:void(0)" class="btn btn-info btn-lg col-md-12 btn-block" role="button" style="height:180px">
+                <i class="fa fa-folder ft-size-96 mg-top-10"></i>
+                <div class="mg-top-10"><strong>工作</strong></div>
+            </a>
+        </div>
+        <div class="col-md-3 col-sm-3 show-grid text-center mg-top-10 mg-bot-50">
+            <a href="javascript:void(0)" class="btn btn-info btn-lg col-md-12 btn-block" role="button" style="height:180px">
+                <i class="fa fa-folder ft-size-96 mg-top-10"></i>
+                <div class="mg-top-10"><strong>工作</strong></div>
+            </a>
+        </div>
+        <div id="addWebFolder" class="col-md-3 col-sm-3 show-grid text-center mg-top-10 mg-bot-50">
+            <a href="javascript:void(0)" class="btn btn-default btn-lg col-md-12 btn-block" role="button" style="height:180px">
+                <i class="fa fa-plus-square-o ft-size-96 mg-top-30" style="color: #d4d4d4"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="editWebFolderModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title text-danger" id="myModalLabel">编辑网络文件夹</h4>
+                </div>
+                <div class="modal-body">
+                    <label class="text-success">请输入名称:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success">确定</button>
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+</body>
+<script type="application/javascript">
+    $("#webFolders  a").hover(function(){
+        $(this).find("i").removeClass("fa-folder").addClass("fa-folder-open");
+    }, function(){
+        $(this).find("i").removeClass("fa-folder-open").addClass("fa-folder");
+    });
+
+    $("body").on("click", "#webContainer #addWebFolder", function(){
+        $("#webContainer #editWebFolderModal input").val("");
+        $("#webContainer #editWebFolderModal input").select();
+        $("#editWebFolderModal").modal('show');
+    });
+
+    $("body").on("click", "#webContainer .nav li", function(){
+        $("#webContainer .nav li").removeClass("active");
+        $(this).addClass("active");
+    });
+
+    $("body").on("click", "#webContainer .folder-card li[name='folderEdit']", function(){
+        var id = $(this).data("id");
+        var name = $(this).data("name");
+        $("#webContainer #editWebFolderModal input").val(name);
+        $("#webContainer #editWebFolderModal input").select();
+        $("#editWebFolderModal").modal('show');
+    });
+
+    $("body").on("click", "#webContainer .folder-card li[name='folderDel']", function(){
+        var id = $(this).data("id");
+        alert(id);
+    });
+
+    $("body").on("click", "#webContainer .folder-card li[name='folderMove']", function(){
+        var id = $(this).data("id");
+        alert(id);
+    });
+
+</script>
+</html>
